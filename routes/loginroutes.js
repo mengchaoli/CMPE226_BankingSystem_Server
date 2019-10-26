@@ -76,3 +76,7 @@ exports.login = function(req,res){
         }
     });
 }
+
+// exports.login2 = (req, res) => {
+//   res.redirect('back');
+// };
