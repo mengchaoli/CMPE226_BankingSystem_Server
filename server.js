@@ -1,6 +1,7 @@
 const express = require("express");
 const login = require('./routes/loginroutes');
 const addCustomer = require('./routes/addCustomerroutes');
+const getCustomersList = require('./routes/getCustomersList');
 const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,6 +20,7 @@ router.get('/', function(req, res) {
 router.post('/register',login.register);
 router.post('/login',login.login);
 router.post('/addCustomer', addCustomer.addCustomer);
+router.get('/getCustomersList', getCustomersList.getCustomersList);
 //router.get('/login',login.login2);
 app.use('/api', router);
 app.set('view engine', 'ejs');
